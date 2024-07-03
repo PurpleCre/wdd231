@@ -1,0 +1,76 @@
+@media screen and (max-width: 500px) {
+  :root {
+    --main-color: rgb(56, 0, 56);
+    --header-color: rgb(226, 226, 28);
+    --paragraph-color: rgb(192, 190, 190);
+    --button-img: linear-gradient(rgb(255, 255, 0), rgb(255, 138, 5));
+    --card-color: rgb(223, 225, 226);
+  }
+
+  /* header */
+  header p {
+    text-wrap:nowrap;
+  }
+
+  /* hamburger */
+  #menu {
+    display: block;
+    position: absolute;
+    top: 1px;
+    text-decoration: none;
+    right: 30px;
+  }
+
+  #menu::before {
+    content: "≡";
+    font-size: 3rem;
+    font-weight: 700;
+    padding-right: 0;
+    background-color: inherit;
+    color: var(--card-color);
+  }
+
+  #menu.show::before {
+    content: "✖";
+    font-size: 2.5rem;
+  }
+
+  /* nav */
+  header nav {
+    display: none;
+  }
+
+  nav.show {
+    display: block;
+    position: absolute;
+    /* top: 100px; */
+    width: 100%;
+  }
+
+  nav.show a {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  /* main */
+  main, #hero, #info, #buss, footer{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #hero img {
+    height: 200px;
+  }
+
+  #hero button {
+    bottom: 300px;
+    right: 40px;
+  }
+
+  /* footer */
+  footer {
+    gap: 20px;
+    place-items: first baseline;
+  }
+}
