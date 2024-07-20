@@ -2,21 +2,21 @@
   {
     "name": "Ok",
     "address": "11501, Donnybrook Dr, Harare",
-    "email": " online@okzim.co.zw",
+    "mail": "online@okzim.co.zw",
     "number": " +263 4 757311-9",
     "url": "https://okonline.co.zw/",
     "image": "./images/ok.webp",
-    "level": 2,
+    "level": "Gold",
     "motto": "More smiles everyday"
   },
   {
     "name": "Choppies",
     "address": "557W+5F4, Harare",
-    "email": "info@choppies.co.zw",
+    "mail": "info@choppies.co.zw",
     "number": "+263 9 470240/+263 9 471083",
     "url": "https://choppies.co.zw/",
     "image": "./images/choppies.webp",
-    "level": 2,
+    "level": "Gold",
     "motto": "Giving customers the best total value for their money."
   },
   {
@@ -26,7 +26,7 @@
     "mail": "info@cfirstone.co.zw",
     "url": "https://firstone.co.zw/",
     "image": "./images/first.webp",
-    "level": 2,
+    "level": "Silver",
     "motto": "Your needs First"
   },
   {
@@ -36,7 +36,7 @@
     "number": "+263784 947 992 | +263 771 360 917",
     "url": "https://vincitechrnd.co.zw/",
     "image": "./images/vinci.webp",
-    "level": 2,
+    "level": "Silver",
     "motto": "Together we will invent the future."
   },
   {
@@ -46,7 +46,7 @@
     "number": "+263 242 308 400",
     "url": "https://www.oldmutual.co.zw/contact-us/",
     "image": "./images/oldm.webp",
-    "level": 2,
+    "level": "Gold",
     "motto": "We're in the business of helping people and companies do great things with their money. Let's do the same for you"
   },
   {
@@ -56,7 +56,7 @@
     "number": "08677 008 666",
     "url": "https://www.bancabc.co.zw/",
     "image": "./images/bancabc.webp",
-    "level": 2,
+    "level": "Bronze",
     "motto": "To become a top 5 financial services provider who is a partner of choice for customers, employees and other stakeholders by 2023."
   },
   {
@@ -66,7 +66,7 @@
     "number": "(024) 2772655",
     "url": "https://joinacity.co.zw/",
     "image": "./images/joina.webp",
-    "level": 2,
+    "level": "Gold",
     "motto": "The heart of the city"
   }
 ]

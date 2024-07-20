@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Collective Chammber of Commerce: Directory Page</title>
+    <title>The Collective Chammber of Commerce: Home Page</title>
     <meta
       name="description"
-      content="Chamber Directory Page by Panashe Gonese"
+      content="Chamber Home Page by Panashe Gonese"
     />
     <meta name="author" content="Panashe Gonese" />
 
     <!--  Essential META Tags -->
-    <meta property="og:title" content="Chamber Directory Page" />
+    <meta property="og:title" content="Chamber Home Page" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/images/hero.webp" />
     <meta
       property="og:url"
-      content="https://purplecre.github.io/wdd231/chamber/directory.html"
+      content="https://purplecre.github.io/wdd231/chamber/index.html"
     />
     <!-- *** Call to Action *** -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,7 +24,7 @@
     <!--  Non-Essential, But Recommended -->
     <meta
       property="og:description"
-      content="The Collective Chammber of Commerce Directory Page by Panashe Gonese"
+      content="The Collective Chammber of Commerce Home Page by Panashe Gonese"
     />
     <meta property="og:site_name" content="PurpleCre" />
     <meta
@@ -39,9 +39,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/directory.css" />
-    <link rel="stylesheet" href="styles/directory-mobile.css" />
-    <script src="scripts/directory.js" defer></script>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/home-mobile.css" />
+    <script src="scripts/home.js" defer></script>
     <link rel="icon" href="images/favicon.ico" />
   </head>
   <body>
@@ -55,7 +55,7 @@
         </div>
       </section>
       <nav>
-        <a href="index.html">Home</a><a href="#" class="active">Directory</a
+        <a href="#"  class="active">Home</a><a href="directory.html">Directory</a
         ><a href="#">Join</a><a href="#">Discover</a>
         <!-- <a href="#">🌓</a> -->
       </nav>
@@ -67,7 +67,7 @@
           <!-- <source media="(min-width: )" srcset=""> -->
           <img src="images/hero.webp" alt="Hero image" />
         </picture>
-        <button>Keynote Tickets</button>
+        <a href="#"><button>Join The Collective</button></a>
       </section>
       <h2>Home</h2>
       <section id="info">
@@ -80,21 +80,21 @@
           <div id="weather">
             <p id="emo">⛅</p>
             <div id="stuff">
-              <p>75⁰F</p>
-              <p>Partly Cloudy</p>
-              <p>High: 85⁰</p>
-              <p>Low: 52⁰</p>
-              <p>Humidity: 34%</p>
-              <p>Sunrise: 7:30am</p>
-              <p>Sunset: 9:59pm</p>
+              <p id="temp">75⁰F</p>
+              <p id="desc">Partly Cloudy</p>
+              <p id="high">High: 85⁰</p>
+              <p id="low">Low: 52⁰</p>
+              <p id="humid">Humidity: 34%</p>
+              <p id="rise">Sunrise: 7:30am</p>
+              <p id="set">Sunset: 9:59pm</p>
             </div>
           </div>
         </section>
         <section>
           <h3>Weather Forecast</h3>
-          <p>Today: <strong>90⁰F</strong></p>
-          <p>Wednesday: <strong>89⁰</strong></p>
-          <p>Thursday: <strong>68⁰</strong></p>
+          <p id="day1">Today: <strong>90⁰F</strong></p>
+          <p id="day2">Wednesday: <strong>89⁰</strong></p>
+          <p id="day3">Thursday: <strong>68⁰</strong></p>
         </section>
       </section>
       <div class="menu">
