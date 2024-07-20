@@ -90,7 +90,7 @@ function getWeekDay(mod) {
 function displayResults(data, data2) {
   temp.innerHTML = `${data.main.temp}&deg;C`;
   // const iconsrc = `https://openweathermap.org/img/w/${______}.___`;
-  desc.innerHTML = data.weather[0].description.;
+  desc.innerHTML = data.weather[0].description;
   
   high.innerHTML = `High: ${data.main.temp_max}`;
   low.innerHTML = `Low: ${data.main.temp_min}`;
