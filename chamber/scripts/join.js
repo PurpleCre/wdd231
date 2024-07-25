@@ -1,6 +1,6 @@
-import { levels } from "./levels";
+import { levels } from "../data/levels.js";
 
-const non = document.querySelector("non-btn");
+const non = document.querySelector("#non-btn");
 const bronze = document.querySelector("#bronze-btn");
 const silver = document.querySelector("#silver-btn");
 const gold = document.querySelector("#gold-btn");
@@ -9,17 +9,54 @@ const name = document.querySelector("#name");
 const close = document.querySelector("#close-btn");
 const price = document.querySelector("#price");
 const benefits = document.querySelector("#benefits");
+const stamp = document.querySelector("#time");
 
-non.addEventListener("click", showDialog("non"));
-bronze.addEventListener("click", (e) => {
-//   e.preventDefault();
+// dynamically inject date into doc
+const date1 = new Date()
+document.querySelector("#year").innerHTML = date1.getFullYear();
+document.querySelector(
+  "#lastmodified"
+).innerHTML = `Last modified: ${document.lastModified}`;
+
+window.addEventListener("load", (e) => {
+  getDateAndTime();
+  console.log("here!!!!");
+});
+
+non.addEventListener("click", () => {
+  showDialog("non");
+});
+bronze.addEventListener("click", () => {
   showDialog("bronze");
 });
-silver.addEventListener("click", showDialog("silver"));
-gold.addEventListener("click", showDialog("gold"));
-close.addEventListener("click", dialog.close());
+silver.addEventListener("click", () => {
+  showDialog("bronze");
+});
+gold.addEventListener("click", () => {
+  showDialog("bronze");
+});
+close.addEventListener("click", () => {
+  dialog.close();
+});
+
+function getDateAndTime() {
+  const d = Date.now();
+  const date = new Date(d);
+
+  const formattedDate = date.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  stamp.value = `${formattedDate} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+}
 
 function showDialog(level) {
+  // First clear the ul
+  benefits.innerHTML = ``;
+
   if (level.toLowerCase() == "non") {
     name.innerHTML = `${levels[0].name}`;
     price.innerHTML = `${levels[0].price}`;
