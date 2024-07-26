@@ -249,6 +249,52 @@ main {
   max-width: 100px;
 }
 
+/* discover page */
+
+#discover{
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  gap: 10px;
+}
+
+#sidebar {
+  position: relative;
+}
+
+#sidebar div {
+  border: 1px black solid;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px 8px;
+}
+
+/* welcome msg */
+#welcome {
+  background-image: var(--button-img);
+  position: sticky;
+}
+
+#close {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  font-size: 10px;
+  background-image: var(--button-img);
+  color: rgb(14, 13, 13);
+  border: none;
+}
+
+.close {
+  display: none;
+}
+
+/* calender */
+iframe {
+  margin: 0 auto;
+  width: 90%;
+  height: 300px;
+}
+
 /* footer */
 footer {
   background-color: var(--main-color);

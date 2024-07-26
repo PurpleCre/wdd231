@@ -80,6 +80,7 @@
   #hero,
   #info,
   #buss,
+  #discover,
   footer {
     display: grid;
     grid-template-columns: 1fr;
