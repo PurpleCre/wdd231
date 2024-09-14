@@ -24,6 +24,7 @@ courseNav.addEventListener("click", (event) => {
   getCourses(event.target.textContent);
 });
 
+// Course data
 const courseList = [
   {
     subject: "CSE",
@@ -93,6 +94,7 @@ const courseList = [
   },
 ];
 
+// Dynamically create card and inject course data
 function createCard(course) {
   const card = document.createElement("div");
 
@@ -106,13 +108,11 @@ function createCard(course) {
  
   card.appendChild(courseName);
   courses.appendChild(card);
-  
-  console.log("card appended");
 }
 
+// Append cards to div
 function getCourses(type) {
   courses.innerHTML = ``;
-  console.log(type);
   let filteredCourses = [];
   if (type == "All") {
     filteredCourses = courseList;
@@ -127,10 +127,13 @@ function getCourses(type) {
 
 getCourses("All");
 
+// Get credit count
 let creds = 0;
+creds = courseList.reduce((acc, course) => acc + course.credits, 0)
 
+// Get credits left
+let credsLeft = 0;
 const incompleteCourses = courseList.filter((course) => !course.completed);
-creds = incompleteCourses.reduce((acc, course) => acc + course.credits, 0);
-cred.innerHTML = `There are ${creds} credits left until fruition`;
+credsLeft = incompleteCourses.reduce((acc, course) => acc + course.credits, 0);
 
-console.log(creds);
+cred.innerHTML = `There are ${creds} credits in this certificate. ${credsLeft} credits left until fruition`;
