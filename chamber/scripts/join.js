@@ -1,5 +1,6 @@
 import { levels } from "../data/levels.js";
 
+const level = document.querySelector("#level");
 const non = document.querySelector("#non-btn");
 const bronze = document.querySelector("#bronze-btn");
 const silver = document.querySelector("#silver-btn");
@@ -19,6 +20,7 @@ document.querySelector(
 ).innerHTML = `Last modified: ${document.lastModified}`;
 
 window.addEventListener("load", (e) => {
+  level.classList.remove("reveal")
   getDateAndTime();
   console.log("here!!!!");
 });
@@ -30,10 +32,10 @@ bronze.addEventListener("click", () => {
   showDialog("bronze");
 });
 silver.addEventListener("click", () => {
-  showDialog("bronze");
+  showDialog("silver");
 });
 gold.addEventListener("click", () => {
-  showDialog("bronze");
+  showDialog("gold");
 });
 close.addEventListener("click", () => {
   dialog.close();
@@ -59,7 +61,7 @@ function showDialog(level) {
 
   if (level.toLowerCase() == "non") {
     name.innerHTML = `${levels[0].name}`;
-    price.innerHTML = `${levels[0].price}`;
+    price.innerHTML = `Price: ${levels[0].price}`;
 
     let list = levels[0].benefits;
     list.forEach((item) => {
@@ -69,7 +71,7 @@ function showDialog(level) {
     });
   } else if (level.toLowerCase() == "bronze") {
     name.innerHTML = `${levels[1].name}`;
-    price.innerHTML = `${levels[1].price}`;
+    price.innerHTML = `Price: $${levels[1].price}`;
 
     let list = levels[1].benefits;
     list.forEach((item) => {
@@ -79,7 +81,7 @@ function showDialog(level) {
     });
   } else if (level.toLowerCase() == "silver") {
     name.innerHTML = `${levels[2].name}`;
-    price.innerHTML = `${levels[2].price}`;
+    price.innerHTML = `Price: $${levels[2].price}`;
 
     let list = levels[2].benefits;
     list.forEach((item) => {
@@ -89,7 +91,7 @@ function showDialog(level) {
     });
   } else if (level.toLowerCase() == "gold") {
     name.innerHTML = `${levels[3].name}`;
-    price.innerHTML = `${levels[3].price}`;
+    price.innerHTML = `Price: $${levels[3].price}`;
 
     let list = levels[3].benefits;
     list.forEach((item) => {

@@ -40,6 +40,7 @@
     />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/join.css" />
     <link rel="stylesheet" href="styles/join-mobile.css" />
     <link rel="icon" href="images/favicon.ico" />
   </head>
@@ -50,57 +51,75 @@
         <div>
           <h1>The Collective</h1>
           <p>Chamber of Commerce</p>
-          <a href="#" id="menu"></a>
+          <a href="#" id="menu">≡</a>
         </div>
       </section>
       <nav>
-        <a href="#"  class="active">Join</a><a href="directory.html">Directory</a
-        ><a href="join.html">Join</a><a href="#">Discover</a>
+        <a href="index.html">Home</a><a href="directory.html">Directory</a
+        ><a href="join.html" class="active">Join</a><a href="discover.html">Discover</a>
         <!-- <a href="#">🌓</a> -->
       </nav>
     </header>
     <main>
-      <h1>Join Us</h1>
+      <section>
+        <h1>Join Us</h1>
+  
+        <form method="GET" action="thanks.html" class="designOne">
+          <fieldset>
+            <legend>Member Application Form</legend>
+            <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+            <label>Organizational Title <input type="text" name="title"  autocomplete="organization-title" title="Organizational title within the organization" ></label>
+            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+            <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="0773657398" pattern="^{5,}a-zA-Z?$" required></label>
+            <label>Organization's Name <input type="text" name="name"  required autocomplete="organization" title="Organization's name" placeholder="Name"></label>
+            <label>Select Membership Level <select name="membership" id="membership" required>
+              <option value="non-profit" selected>Non-Profit</option>
+              <option value="bronze" >Bronze</option>
+              <option value="silver" >Silver</option>
+              <option value="gol" >Gold</option>
+            </select></label>
+          </fieldset>
+  
+          <fieldset>
+            <legend>Organization's Description</legend>
+            <label><textarea name="description" title="description"></textarea></label>
+          </fieldset>
+  
+          <label><input type="hidden" id="time" name="time" value=""></label>
+  
+          <input type="submit" value="Join Us">
+        </form>
+      </section>
+      <section id="level" class="reveal">
+        <h1>Membership Levels</h1>
+        <div class="card">
+          <p>Non-Profit Membership Level</p>
+          <button id="non-btn">More Info</button>
+        </div>
+        <div class="card">
+          <p>Bronze Membership Level</p>
+          <button id="bronze-btn">More Info</button>
+        </div>
+        <div class="card">
+          <p>Silver Membership Level</p>
+          <button id="silver-btn">More Info</button>
+        </div>
+        <div class="card">
+          <p>Gold Membership Level</p>
+          <button id="gold-btn">More Info</button>
+        </div>
 
-      <form method="GET" action="thanks.html" class="designOne">
-        <fieldset>
-          <legend>Member Application Form</legend>
-          <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
-          <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-          <label>Organizational Title <input type="text" name="title"  autocomplete="organization-title" title="Organizational title within the organization" ></label>
-          <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
-          <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="Legend" pattern="^{5,}a-zA-Z?$"></label>
-          <label>Organization's Name <input type="text" name="name"  required autocomplete="organization" title="Organization's name" placeholder="Name"></label>
-        </fieldset>
-
-        <fieldset>
-          <legend>Membership Levels</legend>
-          <label><input type="radio" name="membership" value="Non-Profit" checked> Non-Profit</label> <button id="non-btn">More Info</button>
-          <label><input type="radio" name="membership" value="Bronze"> Bronze</label> <button id="bronze-btn">More Info</button>
-          <label><input type="radio" name="membership" value="Silver"> Silver</label> <button id="silver-btn">More Info</button>
-          <label><input type="radio" name="membership" value="Gold"> Gold</label> <button id="gold-btn">More Info</button> 
-          
-          <dialog id="dialog-box">
-            <div>
-              <h2 id="name"></h2>
-              <button id="close-btn">X</button>
-            </div>
-            <p id="price"></p>
-            <h3>Benefits</h3>
-            <ul id="benefits"></ul>
-          </dialog>
-        </fieldset>
-
-        <fieldset>
-          <legend>Organization's Description</legend>
-          <label><textarea name="description" title="description"></textarea></label>
-        </fieldset>
-
-        <label><input type="hidden" id="time" name="time" value=""></label>
-
-        <input type="submit" value="Join Us">
-      </form>
-
+        <dialog id="dialog-box">
+          <div>
+            <h2 id="name"></h2>
+            <button id="close-btn">X</button>
+          </div>
+          <p id="price"></p>
+          <h3>Benefits</h3>
+          <ul id="benefits"></ul>
+        </dialog>
+      </section>
     </main>
     <footer>
       <section id="address">
