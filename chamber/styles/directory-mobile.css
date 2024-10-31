@@ -112,3 +112,8 @@
     place-items: first baseline;
   }
 }
+
+/* discover */
+figure img:hover {
+  transform: none
+}
